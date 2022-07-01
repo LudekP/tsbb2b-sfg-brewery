@@ -22,7 +22,7 @@ class BeerOrderStatusChangeEventListenerTest {
     @BeforeEach
     void setUp() {
         wireMockServer.start();
-        //configureFor("localhost", 8080);
+        configureFor("localhost", 8080);
         RestTemplateBuilder restTemplateBuilder = new RestTemplateBuilder();
         listener = new BeerOrderStatusChangeEventListener(restTemplateBuilder);
     }
